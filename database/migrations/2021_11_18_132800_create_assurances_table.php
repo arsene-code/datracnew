@@ -22,6 +22,7 @@ class CreateAssurancesTable extends Migration
             $table->string('site_web', 100)->nullable();
             $table->string('tel',100)->nullable();
             $table->string('bp',100)->nullable();
+            //$table->string('avatar')->default('user.jpg');
             $table->string('logo')->nullable();
             $table->unsignedBigInteger('ville_id')->unsigned();
             $table->foreign('ville_id')
