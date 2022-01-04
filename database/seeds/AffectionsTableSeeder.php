@@ -12,10 +12,10 @@ class AffectionsTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('affections')->insert([
-            [
-
-            ],
-        ]);
+//        DB::table('affections')->insert([
+//            [
+//
+//            ],
+//        ]);
     }
 }

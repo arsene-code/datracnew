@@ -16,10 +16,18 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('home');
 });
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');
 
-Auth::routes();
+Route::get('/dashboard/utilisateurs', function () {
+    return view('utilisateurs');
+})->name('users');
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/dashboard/caisiere', function () {
+    return view('search');
+})->name('search');
+
 
 Auth::routes();
 
