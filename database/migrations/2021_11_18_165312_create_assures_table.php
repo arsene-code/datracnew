@@ -16,12 +16,12 @@ class CreateAssuresTable extends Migration
         Schema::create('assures', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('n_matricule',100)->unique();
-            $table->enum('civilite', ['M','MME','MLLE'])->default('M');
+            $table->string('civilite')->default('M');
             $table->string('nom',100);
             $table->string('prenom',100);
             $table->date('date_nais');
             $table->date('date_fin_con');
-            $table->enum('sexe', ['F', 'M'])->default('M');
+            $table->string('sexe')->default('Masculin');
             $table->string('n_dossier')->nullable();
             $table->string('telephone')->nullable();
             $table->string('adresse')->nullable();

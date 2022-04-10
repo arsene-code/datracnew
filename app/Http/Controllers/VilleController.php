@@ -10,11 +10,12 @@ class VilleController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\JsonResponse|\Illuminate\Http\Response
      */
     public function index()
     {
-        //
+        $ville = Ville::all();
+        return response()->json(array('success' => true, 'villes' => $ville));
     }
 
     /**

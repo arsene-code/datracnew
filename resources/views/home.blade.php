@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>eStartup Bootstrap Template - Index</title>
+    <title>Datrac-Index</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -25,6 +25,8 @@
 
     <!-- Template Main CSS File -->
     <link href="/assets/frontend/css/style.css" rel="stylesheet">
+    @notifyCss
+
 
     <!-- =======================================================
     * Template Name: eStartup - v4.7.0
@@ -37,29 +39,30 @@
 <body>
 
 <!-- ======= Header ======= -->
-<header id="header" class="header fixed-top d-flex align-items-center">
-    <div class="container d-flex align-items-center justify-content-between">
+{{--<header id="header" class="header fixed-top d-flex align-items-center">--}}
+{{--    <div class="container d-flex align-items-center justify-content-between">--}}
 
-        <div id="logo">
-            <h1><a href="/"><span>e</span>Datrac</a></h1>
-            <!-- Uncomment below if you prefer to use an image logo -->
-            <!-- <a href="index.html"><img src="/assets/frontend/img/logo.png" alt="" title="" /></a>-->
-        </div>
+{{--        <div id="logo">--}}
+{{--            <h1><a href="/"><span>e</span>Datrac</a></h1>--}}
+{{--            <!-- Uncomment below if you prefer to use an image logo -->--}}
+{{--            <!-- <a href="index.html"><img src="/assets/frontend/img/logo.png" alt="" title="" /></a>-->--}}
+{{--        </div>--}}
 
-        <nav id="navbar" class="navbar">
-            <ul>
-                <li><a class="nav-link scrollto" href="#hero">Home</a></li>
-                <li><a class="nav-link scrollto active" href="/login">Login</a></li>
-            </ul>
-            <i class="bi bi-list mobile-nav-toggle"></i>
-        </nav><!-- .navbar -->
+{{--        <nav id="navbar" class="navbar">--}}
+{{--            <ul>--}}
+{{--                <li><a class="nav-link scrollto" href="#hero">Home</a></li>--}}
+{{--                <li><a class="nav-link scrollto active" href="/login">Login</a></li>--}}
+{{--            </ul>--}}
+{{--            <i class="bi bi-list mobile-nav-toggle"></i>--}}
+{{--        </nav><!-- .navbar -->--}}
 
-    </div>
-</header><!-- End Header -->
+{{--    </div>--}}
+{{--</header><!-- End Header -->--}}
 
 <!-- ======= Hero Section ======= -->
 <section id="hero">
     <div class="hero-container" data-aos="fade-in">
+        <x:notify-messages />
         <h1>Bienvenue Sur Datrac</h1>
         <h2>Votre Plateforme De Dématérialisation du Processus de Soin</h2>
         <img src="/assets/frontend/img/homeCare.svg" alt="Hero Imgs" data-aos="zoom-out" data-aos-delay="100">
@@ -83,6 +86,8 @@
 
 <!-- Template Main JS File -->
 <script src="/assets/frontend/js/main.js"></script>
+@notifyJs
+
 
 </body>
 

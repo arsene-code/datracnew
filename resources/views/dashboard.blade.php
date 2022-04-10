@@ -1,19 +1,20 @@
 @extends('layouts.app')
 
 @section('content')
+    <x:notify-messages />
     <!-- ======= Sidebar ======= -->
     <aside id="sidebar" class="sidebar">
 
         <ul class="sidebar-nav" id="sidebar-nav">
 
             <li class="nav-item mb-4">
-                <a class="" href="index.html">
+                <a class="" href="/dashboard">
                     <img src="/assets/images/assurance/cnamgs.png" alt="cnamgs" width="100%" height="100%">
                 </a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link " href="index.html">
+                <a class="nav-link " href="/dashboard">
                     <i class="bi bi-grid"></i>
                     <span>Dashboard</span>
                 </a>
@@ -128,7 +129,7 @@
                     <div class="col-lg-3 col-md-4">
                         <div class="icon-box">
                             <i class="bi bi-people" style="color: #ffbb2c;"></i>
-                            <h3><a href="/dashboard/concours-gma">Utilisateurs</a></h3>
+                            <h3><a href="/dashboard/utilisateurs">Utilisateurs</a></h3>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-4 mt-4 mt-md-0">

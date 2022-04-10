@@ -25,20 +25,14 @@
 
     <!-- Template Main CSS File -->
     <link href="assets/dashboard/css/style.css" rel="stylesheet">
-
-    <!-- =======================================================
-    * Template Name: NiceAdmin - v2.1.0
-    * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
-    * Author: BootstrapMade.com
-    * License: https://bootstrapmade.com/license/
-    ======================================================== -->
+    @notifyCss
 </head>
 
 <body>
 
 <main>
     <div class="container">
-
+        <x:notify-messages />
         <section class="section register min-vh-100 d-flex flex-column align-items-center justify-content-center py-4">
             <div class="container">
                 <div class="row justify-content-center">
@@ -102,7 +96,6 @@
                     </div>
                 </div>
             </div>
-
         </section>
 
     </div>
@@ -122,6 +115,7 @@
 
 <!-- Template Main JS File -->
 <script src="assets/dashboard/js/main.js"></script>
+@notifyJs
 
 </body>
 

@@ -36,6 +36,7 @@ class CreateProfilsTable extends Migration
                 array('libelle'=>'TECHNICIEN LABO'),
                 array('libelle'=>'PRATICIEN'),
                 array('libelle'=>'MEDECIN REFERENT'),
+                array('libelle'=>'ASSURE'),
             )
         );
 

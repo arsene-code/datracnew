@@ -23,9 +23,9 @@
     <link href="/assets/dashboard/vendor/remixicon/remixicon.css" rel="stylesheet">
     <link href="/assets/dashboard/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
     <link href="/assets/dashboard/vendor/simple-datatables/style.css" rel="stylesheet">
-
     <!-- Template Main CSS File -->
     <link href="/assets/dashboard/css/style.css" rel="stylesheet">
+    @notifyCss
 
 </head>
 <body>
@@ -254,19 +254,18 @@
 
                     <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
                         <img src="/assets/dashboard/img/profile-img.jpg" alt="Profile" class="rounded-circle">
-                        <span class="d-none d-md-block dropdown-toggle ps-2">Prime Clet &nbsp;</span>
 
-                        {{--                        @auth--}}
-{{--                            <span class="d-none d-md-block dropdown-toggle ps-2">{{ Auth::user()->username }} &nbsp;</span>--}}
-{{--                        @endauth--}}
+                        @auth
+                            <span class="d-none d-md-block dropdown-toggle ps-2">{{ Auth::user()->username }} &nbsp;</span>
+                        @endauth
 
                     </a><!-- End Profile Iamge Icon -->
 
                     <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
                         <li class="dropdown-header">
-                            <h6>Prime Clet</h6>
+                            <h6>{{ Auth::user()->username }}</h6>
                             <span>
-                                Boss CNAMGS
+                                {{ (\App\Profil::where('id', Auth::user()->profil_id)->first())->libelle }}
                             </span>
                         </li>
                         <li>
@@ -330,9 +329,30 @@
     <script src="/assets/dashboard/vendor/bootstrap/js/bootstrap.bundle.js"></script>
     <script src="/assets/dashboard/vendor/php-email-form/validate.js"></script>
     <script src="/assets/dashboard/vendor/simple-datatables/simple-datatables.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- Template Main JS File -->
     <script src="/assets/dashboard/js/main.js"></script>
-    <script src="{{ mix('js/app.js') }}"></script>
+{{--    <script src="{{ mix('js/app.js') }}"></script>--}}
+    @notifyJs
+
+    <script language="JavaScript">
+        jQuery(document).ready(function(){
+            // e.preventDefault();
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
+                }
+            });
+            $.ajax({
+                url: "{{ url('/villes') }}",
+                type: 'get',
+                dataType: 'json',
+                success: function(response){
+                    console.log(response.villes)
+                }
+            });
+        });
+    </script>
 </body>
 </html>
